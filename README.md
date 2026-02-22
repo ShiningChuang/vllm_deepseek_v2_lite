@@ -16,6 +16,7 @@ git clone https://github.com/vllm-project/vllm.git &&
 cd vllm &&
 git checkout v0.10.2
 
+export HOME_LLM=/data/lxzhong_home
 # enter develop docker
 docker run -it --gpus all \
   -p 8000:8000 \
@@ -36,6 +37,7 @@ pip install -e /workspace/vllm &&
 python3 -c "import vllm; import os; print('vllm from:', vllm.__file__)"
 
 # run server using source version
+export VLLM_LOG_MOE_SHAPES=1
 python3 -m vllm.entrypoints.openai.api_server \
   --model deepseek-ai/DeepSeek-V2-Lite \
   --trust-remote-code \
@@ -44,4 +46,15 @@ python3 -m vllm.entrypoints.openai.api_server \
   --max-model-len 8192 \
   --host 0.0.0.0 \
   --port 8000
+  # --enforce-eager
+
+# client test in another terminal
+curl http://localhost:8000/v1/completions \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "deepseek-ai/DeepSeek-V2-Lite",
+    "prompt": "Say hello in one sentence.",
+    "max_tokens": 32,
+    "temperature": 0.2
+  }'
 ```
