@@ -25,6 +25,7 @@ docker run --rm -it --gpus all \
   -e VLLM_ATTENTION_BACKEND=XFORMERS \
   -v $HOME_LLM/hf_cache:/root/.cache/huggingface \
   -v $HOME_LLM/vllm_dev/vllm:/workspace/vllm \
+  -v $HOME_LLM/result:/tmp \
   --name vllm-dev \
   --entrypoint bash \
   vllm/vllm-openai:v0.10.2
