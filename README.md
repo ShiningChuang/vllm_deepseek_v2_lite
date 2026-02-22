@@ -17,7 +17,7 @@ cd vllm &&
 git checkout v0.10.2
 
 # enter develop docker
-docker run --rm -it --gpus all \
+docker run -it --gpus all \
   -p 8000:8000 \
   -e HF_TOKEN="$HF_TOKEN" \
   -e VLLM_USE_V1=0 \
