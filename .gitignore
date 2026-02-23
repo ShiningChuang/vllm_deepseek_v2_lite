@@ -1,2 +1,2 @@
-share_test/.json
-share_test/.txt
+share_test/*.json
+share_test/*.txt
