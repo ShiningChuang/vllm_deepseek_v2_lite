@@ -1,0 +1,174 @@
+[21:41:34] === run_all.sh started ===
+[21:41:34] RESULT_DIR  : /data/lxzhong_home/result
+[21:41:34] CONTAINER   : vllm-dev
+[21:41:34] TOTAL_REQ   : 100
+[21:41:34] Prompts file: /users/lxzhong/vllm_deepseek_v2_lite/final_test/prompts.txt (2000 lines)
+[21:41:34] 
+[21:41:34] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[21:41:34] TEST: concurrency=1  run_id=13  label=conc=1
+[21:41:34] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[21:41:34] Stopping vLLM server inside container...
+[21:41:39] Server stopped.
+[21:41:39] Cleared old logs for run_id=13.
+[21:41:39] Starting vLLM server with RUN_ID=13 ...
+[21:41:40] Waiting for vLLM server (up to 300s)...
+[21:42:45] Server is ready (65s elapsed).
+[21:42:45] Sending warm-up request...
+[21:42:45] Warm-up done.
+[21:42:47] Cleared warm-up logs. Starting real workload...
+[run_client] concurrency=1 total=100 qps=unlimited prompts=2000
+  [w1] 10 done, 10 ok, last_lat=6.09s
+  [w3] 20 done, 20 ok, last_lat=3.10s
+  [w1] 30 done, 30 ok, last_lat=3.13s
+  [w3] 40 done, 40 ok, last_lat=3.09s
+  [w1] 50 done, 50 ok, last_lat=6.11s
+  [w3] 60 done, 60 ok, last_lat=3.11s
+  [w1] 70 done, 70 ok, last_lat=10.45s
+  [w3] 80 done, 80 ok, last_lat=12.14s
+  [w1] 90 done, 90 ok, last_lat=3.04s
+  [w3] 100 done, 100 ok, last_lat=7.74s
+[done] elapsed=771.2s rps=0.13 ok=100 fail=0 mean_lat=7.71s p50=6.12s p95=15.64s
+[21:55:39] Workload done. Client results: /data/lxzhong_home/result/client_run13_conc1.json
+[21:55:39] MoE log rank0: 749372 lines.
+[21:55:39] 
+[21:55:39] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[21:55:39] TEST: concurrency=4  run_id=14  label=conc=4
+[21:55:39] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[21:55:39] Stopping vLLM server inside container...
+[21:55:44] Server stopped.
+[21:55:44] Cleared old logs for run_id=14.
+[21:55:44] Starting vLLM server with RUN_ID=14 ...
+[21:55:44] Waiting for vLLM server (up to 300s)...
+[21:56:49] Server is ready (65s elapsed).
+[21:56:49] Sending warm-up request...
+[21:56:49] Warm-up done.
+[21:56:51] Cleared warm-up logs. Starting real workload...
+[run_client] concurrency=4 total=100 qps=unlimited prompts=2000
+  [w2] 10 done, 10 ok, last_lat=9.74s
+  [w1] 20 done, 20 ok, last_lat=5.66s
+  [w5] 33 done, 33 ok, last_lat=25.72s
+  [w6] 41 done, 41 ok, last_lat=22.11s
+  [w4] 52 done, 52 ok, last_lat=19.90s
+  [w4] 58 done, 58 ok, last_lat=4.21s
+  [w0] 69 done, 69 ok, last_lat=5.82s
+  [w7] 87 done, 87 ok, last_lat=29.88s
+  [w6] 92 done, 92 ok, last_lat=21.14s
+  [w6] 99 done, 99 ok, last_lat=3.69s
+[done] elapsed=350.5s rps=0.29 ok=100 fail=0 mean_lat=13.75s p50=11.39s p95=29.88s
+[22:02:42] Workload done. Client results: /data/lxzhong_home/result/client_run14_conc4.json
+[22:02:42] MoE log rank0: 199836 lines.
+[22:02:42] 
+[22:02:42] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[22:02:42] TEST: concurrency=8  run_id=15  label=conc=8
+[22:02:42] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[22:02:42] Stopping vLLM server inside container...
+[22:02:47] Server stopped.
+[22:02:47] Cleared old logs for run_id=15.
+[22:02:47] Starting vLLM server with RUN_ID=15 ...
+[22:02:47] Waiting for vLLM server (up to 300s)...
+[22:03:52] Server is ready (65s elapsed).
+[22:03:52] Sending warm-up request...
+[22:03:53] Warm-up done.
+[22:03:55] Cleared warm-up logs. Starting real workload...
+[run_client] concurrency=8 total=100 qps=unlimited prompts=2000
+  [w9] 5 done, 5 ok, last_lat=7.66s
+  [w6] 14 done, 14 ok, last_lat=14.74s
+  [w6] 28 done, 28 ok, last_lat=8.20s
+  [w0] 48 done, 48 ok, last_lat=31.47s
+  [w15] 54 done, 54 ok, last_lat=27.81s
+  [w13] 55 done, 55 ok, last_lat=14.65s
+  [w15] 82 done, 82 ok, last_lat=39.97s
+  [w0] 84 done, 84 ok, last_lat=24.35s
+  [w4] 87 done, 87 ok, last_lat=8.98s
+  [w0] 99 done, 99 ok, last_lat=7.48s
+[done] elapsed=218.1s rps=0.46 ok=100 fail=0 mean_lat=17.09s p50=14.17s p95=41.77s
+[22:07:33] Workload done. Client results: /data/lxzhong_home/result/client_run15_conc8.json
+[22:07:33] MoE log rank0: 89180 lines.
+[22:07:33] Stopping vLLM server inside container...
+[22:07:38] Server stopped.
+[22:07:38] 
+[22:07:38] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[22:07:38] All tests complete. Running analysis...
+[22:07:38] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Analysing 3 run(s): ['13', '14', '15']
+Ranks included: [0, 1]
+  Loaded 749372 records from moe_shapes_run13_rank0.jsonl
+  [warn] file not found: /data/lxzhong_home/result/moe_shapes_run13_rank1.jsonl
+
+============================================================
+Run: conc=1  (concurrency=1, total MoE records: 749372)
+============================================================
+
+  Phase                   Count       %   avg tic   goodput(real/pad)
+  -------------------- --------  ------  --------  ------------------
+  Decode (tic<=conc)     744172   99.3%      1.00              0.0625
+  Prefill/Mixed (tic>conc)     5200    0.7%    204.16              0.2777
+
+  tokens_in_chunk histogram:
+    [    1-    1] [decode]: 744172 (99.3%)  #######################################
+    [    2-    2] [prefill/mixed]:     52 ( 0.0%)  
+    [    3-    4] [prefill/mixed]:    104 ( 0.0%)  
+    [    5-    8] [prefill/mixed]:    260 ( 0.0%)  
+    [    9-   16] [prefill/mixed]:   1040 ( 0.1%)  
+    [   17-   32] [prefill/mixed]:    988 ( 0.1%)  
+    [   33-   64] [prefill/mixed]:    884 ( 0.1%)  
+    [   65-  128] [prefill/mixed]:    364 ( 0.0%)  
+    [  129-  256] [prefill/mixed]:    624 ( 0.1%)  
+    [  257-  512] [prefill/mixed]:    260 ( 0.0%)  
+    [  513- 1024] [prefill/mixed]:    208 ( 0.0%)  
+    [ 1025- 2048] [prefill/mixed]:    364 ( 0.0%)  
+    [ 2049- 4096] [prefill/mixed]:     52 ( 0.0%)  
+  Loaded 199836 records from moe_shapes_run14_rank0.jsonl
+  [warn] file not found: /data/lxzhong_home/result/moe_shapes_run14_rank1.jsonl
+
+============================================================
+Run: conc=4  (concurrency=4, total MoE records: 199836)
+============================================================
+
+  Phase                   Count       %   avg tic   goodput(real/pad)
+  -------------------- --------  ------  --------  ------------------
+  Decode (tic<=conc)     196352   98.3%      3.83              0.0739
+  Prefill/Mixed (tic>conc)     3484    1.7%    404.69              0.3125
+
+  tokens_in_chunk histogram:
+    [    1-    1] [decode]:   8736 ( 4.4%)  #
+    [    2-    2] [decode]:   2340 ( 1.2%)  
+    [    3-    4] [decode]: 185276 (92.7%)  #####################################
+    [    5-    8] [prefill/mixed]:    364 ( 0.2%)  
+    [    9-   16] [prefill/mixed]:    260 ( 0.1%)  
+    [   17-   32] [prefill/mixed]:    676 ( 0.3%)  
+    [   33-   64] [prefill/mixed]:    156 ( 0.1%)  
+    [   65-  128] [prefill/mixed]:    728 ( 0.4%)  
+    [  129-  256] [prefill/mixed]:    468 ( 0.2%)  
+    [  257-  512] [prefill/mixed]:    104 ( 0.1%)  
+    [  513- 1024] [prefill/mixed]:    208 ( 0.1%)  
+    [ 1025- 2048] [prefill/mixed]:    364 ( 0.2%)  
+    [ 2049- 4096] [prefill/mixed]:    156 ( 0.1%)  
+  Loaded 89180 records from moe_shapes_run15_rank0.jsonl
+  [warn] file not found: /data/lxzhong_home/result/moe_shapes_run15_rank1.jsonl
+
+============================================================
+Run: conc=8  (concurrency=8, total MoE records: 89180)
+============================================================
+
+  Phase                   Count       %   avg tic   goodput(real/pad)
+  -------------------- --------  ------  --------  ------------------
+  Decode (tic<=conc)      86788   97.3%      7.56              0.0893
+  Prefill/Mixed (tic>conc)     2392    2.7%    374.04              0.3427
+
+  tokens_in_chunk histogram:
+    [    1-    1] [decode]:    208 ( 0.2%)  
+    [    2-    2] [decode]:   3380 ( 3.8%)  #
+    [    3-    4] [decode]:   2704 ( 3.0%)  #
+    [    5-    8] [decode]:  80496 (90.3%)  ####################################
+    [    9-   16] [prefill/mixed]:    624 ( 0.7%)  
+    [   17-   32] [prefill/mixed]:    260 ( 0.3%)  
+    [   33-   64] [prefill/mixed]:    208 ( 0.2%)  
+    [   65-  128] [prefill/mixed]:    364 ( 0.4%)  
+    [  129-  256] [prefill/mixed]:    156 ( 0.2%)  
+    [  257-  512] [prefill/mixed]:    208 ( 0.2%)  
+    [  513- 1024] [prefill/mixed]:    260 ( 0.3%)  
+    [ 1025- 2048] [prefill/mixed]:    260 ( 0.3%)  
+    [ 2049- 4096] [prefill/mixed]:     52 ( 0.1%)  
+[22:08:03] Analysis saved to /data/lxzhong_home/result/phase_analysis.txt
+[22:08:03] === run_all.sh DONE ===

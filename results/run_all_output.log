@@ -1,0 +1,25 @@
+[20:47:51] === run_all.sh started ===
+[20:47:51] RESULT_DIR  : /data/lxzhong_home/result
+[20:47:51] CONTAINER   : vllm-dev
+[20:47:51] TOTAL_REQ   : 200
+[20:47:51] Prompts file: /users/lxzhong/vllm_deepseek_v2_lite/final_test/prompts.txt (2000 lines)
+[20:47:51] 
+[20:47:51] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[20:47:51] TEST: concurrency=1  run_id=10  label=conc=1
+[20:47:51] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[20:47:51] Stopping vLLM server inside container...
+[20:47:56] Server stopped.
+[20:47:56] Cleared old logs for run_id=10.
+[20:47:56] Starting vLLM server with RUN_ID=10 ...
+[20:47:56] Waiting for vLLM server (up to 300s)...
+[20:49:07] Server is ready (70s elapsed).
+[20:49:07] Sending warm-up request...
+[20:49:08] Warm-up done.
+[20:49:10] Cleared warm-up logs. Starting real workload...
+[run_client] concurrency=1 total=200 qps=unlimited prompts=2000
+  [w1] 10 done, 10 ok, last_lat=4.73s
+  [w3] 20 done, 20 ok, last_lat=12.09s
+  [w1] 30 done, 30 ok, last_lat=12.15s
+  [w3] 40 done, 40 ok, last_lat=2.69s
+  [w1] 50 done, 50 ok, last_lat=13.75s
+Terminated
