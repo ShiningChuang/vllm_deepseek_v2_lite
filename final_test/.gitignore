@@ -1,0 +1,12 @@
+# 数据文件
+*.json
+*.txt
+*.csv
+*.parquet
+*.arrow
+
+# 输出结果
+*.log
+*.out
+results/
+outputs/
